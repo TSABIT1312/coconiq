@@ -1,0 +1,6 @@
+export { ContactHero } from './ContactHero'
+export { ContactInfo } from './ContactInfo'
+export { ContactForm } from './ContactForm'
+export { MapEmbed } from './MapEmbed'
+export { ContactFaq } from './ContactFaq'
+export { WhatsAppCta } from './WhatsAppCta'

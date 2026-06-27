@@ -1,0 +1,6 @@
+export { AboutHero } from './AboutHero'
+export { CompanyStory } from './CompanyStory'
+export { VisionMission } from './VisionMission'
+export { CommitmentToQuality } from './CommitmentToQuality'
+export { AboutWhyChoose } from './AboutWhyChoose'
+export { AboutCta } from './AboutCta'

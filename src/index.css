@@ -1,0 +1,173 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+/* === Coconiq Brand Tokens === */
+:root {
+  /* Raw brand palette */
+  --brand-primary: #2F5D50;        /* Deep Green */
+  --brand-secondary: #8B6B4A;      /* Coco Brown */
+  --brand-background: #FAF9F6;     /* Warm White */
+  --brand-surface: #FFFFFF;        /* White */
+  --brand-text: #1F2937;           /* Charcoal */
+  --brand-text-muted: #6B7280;     /* Muted Gray */
+  --brand-border: #E5E7EB;         /* Light Gray */
+
+  /* Semantic tokens (shadcn-compatible) */
+  --background: var(--brand-background);
+  --foreground: var(--brand-text);
+  --card: var(--brand-surface);
+  --card-foreground: var(--brand-text);
+  --popover: var(--brand-surface);
+  --popover-foreground: var(--brand-text);
+  --primary: var(--brand-primary);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--brand-secondary);
+  --secondary-foreground: #FFFFFF;
+  --muted: var(--brand-border);
+  --muted-foreground: var(--brand-text-muted);
+  --accent: var(--brand-secondary);
+  --accent-foreground: #FFFFFF;
+  --border: var(--brand-border);
+  --input: var(--brand-border);
+  --ring: var(--brand-primary);
+  --destructive: oklch(0.577 0.245 27.325);
+
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  /* Fonts */
+  --font-sans: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: var(--font-sans);
+
+  /* Brand color utilities */
+  --color-brand: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-surface: var(--brand-surface);
+
+  /* Semantic color utilities */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+
+  /* Radius scale */
+  --radius-sm: 0.5rem;   /* 8px */
+  --radius-md: 0.75rem;  /* 12px */
+  --radius-lg: 1rem;     /* 16px */
+  --radius-xl: 1.5rem;   /* 24px */
+
+  /* Shadows */
+  --shadow-card: 0 4px 12px rgb(0 0 0 / 0.06);
+  --shadow-hover: 0 10px 30px rgb(0 0 0 / 0.10);
+}
+
+/* Section vertical rhythm: 80px mobile / 120px desktop */
+@utility section-y {
+  padding-block: 5rem;
+
+  @media (min-width: 768px) {
+    padding-block: 7.5rem;
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4 {
+    color: var(--foreground);
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  @media (min-width: 768px) {
+    h1 { font-size: 3.5rem; line-height: 1.05; }
+    h2 { font-size: 2.5rem; line-height: 1.1; }
+    h3 { font-size: 1.75rem; }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  img, svg, video {
+    max-width: 100%;
+    display: block;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
