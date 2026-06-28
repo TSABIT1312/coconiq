@@ -34,7 +34,6 @@ export function GalleryPage(): ReactElement {
       production: 0,
       packaging: 0,
       applications: 0,
-      'plant-growth': 0,
     }
     for (const category of galleryCategoryOrder) {
       byCategory[category] = galleryItems.filter(

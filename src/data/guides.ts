@@ -26,8 +26,8 @@ export const guides: Guide[] = [
     excerpt:
       'How cocopeat supports healthier roots, better water retention, and stronger plant growth across home gardens and commercial farms.',
     content: '',
-    image: '/images/application-potting-seedling.jpg',
-    category: 'educational',
+    image: '/images/guide-benefits-cocopeat.jpg',
+    category: 'educational' as GuideCategory,
     readingTimeMinutes: 6,
     publishedAt: '2026-02-04',
   },
@@ -38,7 +38,7 @@ export const guides: Guide[] = [
     excerpt:
       'Why cocopeat is a reliable substrate for hydroponic systems — pH balance, EC management, and practical setup tips.',
     content: '',
-    image: 'https://images.unsplash.com/photo-1558449028-3d5d5b8c0fd5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/guide-cocopeat-hydroponics.jpg',
     category: 'practical',
     readingTimeMinutes: 8,
     publishedAt: '2026-02-22',

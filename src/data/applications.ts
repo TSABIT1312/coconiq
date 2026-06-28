@@ -38,7 +38,7 @@ export const applications: Application[] = [
       'Use in slabs, bags, or pots',
       'Monitor EC and pH weekly',
     ],
-    image: 'https://images.unsplash.com/photo-1558449028-3d5d5b8c0fd5?auto=format&fit=crop&w=800&q=80',
+    image: '/images/application-hydroponics.jpg',
     gallery: [],
   },
   {
@@ -78,7 +78,7 @@ export const applications: Application[] = [
       'Use as mulch for moisture retention',
       'Blend with compost for greenhouse production',
     ],
-    image: '/images/packaging-bulk-facility.jpg',
+    image: '/images/application-agriculture.jpg',
     gallery: [],
   },
 ]
