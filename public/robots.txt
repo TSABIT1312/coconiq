@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://coconiq.vercel.app/sitemap.xml

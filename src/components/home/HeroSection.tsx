@@ -36,6 +36,7 @@ export function HeroSection(): ReactElement {
           alt="Coconiq Premium Cocopeat Block held by hand"
           ratio="square"
           rounded="xl"
+          priority
           className="md:aspect-[4/5]"
         />
       </Container>

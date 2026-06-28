@@ -18,6 +18,8 @@ export interface MediaPlaceholderProps {
   className?: string
   src?: string
   alt?: string
+  /** Set to true for above-the-fold / LCP images — disables lazy loading */
+  priority?: boolean
 }
 
 const roundedClasses = {
@@ -33,6 +35,7 @@ export function MediaPlaceholder({
   className,
   src,
   alt,
+  priority = false,
 }: MediaPlaceholderProps) {
   if (src) {
     return (
@@ -47,7 +50,9 @@ export function MediaPlaceholder({
         <img
           src={src}
           alt={alt ?? (typeof label === 'string' ? label : 'Image')}
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          decoding={priority ? 'sync' : 'async'}
+          fetchPriority={priority ? 'high' : 'low'}
           className="h-full w-full object-cover"
         />
       </div>
