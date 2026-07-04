@@ -143,7 +143,7 @@ export const products: Product[] = [
     image: '/images/production-coconut-husks.jpg',
     gallery: [
       '/images/production-coconut-husks.jpg',
-      '/images/production-husks-workers.jpg',
+      '/images/production-facility-husks.jpg',
     ],
     benefits: [
       'Naturally durable & long-lasting',

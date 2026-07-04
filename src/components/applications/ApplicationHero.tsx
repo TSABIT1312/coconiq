@@ -20,8 +20,8 @@ export function ApplicationHero(): ReactElement {
           </p>
         </div>
         <MediaPlaceholder
-          src="/images/application-potting-seedling.jpg"
-          alt="Potting seedlings using Coconiq cocopeat as growing medium"
+          src="/images/application-hydroponics.jpg"
+          alt="Coconiq cocopeat used in hydroponics growing setup"
           ratio="square"
           rounded="xl"
           className="md:aspect-[4/5]"

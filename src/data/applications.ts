@@ -18,7 +18,7 @@ export const applications: Application[] = [
       'Mix with compost or potting soil as needed',
       'Use as a top layer or full substrate',
     ],
-    image: '/images/application-potting-seedling.jpg',
+    image: '/images/application-hydroponics.jpg',
     gallery: [],
   },
   {
@@ -58,7 +58,7 @@ export const applications: Application[] = [
       'Keep evenly moist during germination',
       'Transplant directly into beds or pots',
     ],
-    image: '/images/application-potting-seedling.jpg',
+    image: '/images/application-hydroponics.jpg',
     gallery: [],
   },
   {

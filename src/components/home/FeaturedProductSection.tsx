@@ -16,8 +16,8 @@ export function FeaturedProductSection(): ReactElement | null {
     <section aria-labelledby="featured-product-heading" className="bg-background">
       <Container className="section-y grid items-center gap-10 md:grid-cols-2 md:gap-14">
         <MediaPlaceholder
-          src="/images/production-baling-workers.jpg"
-          label="Baling workers at Coconiq production facility"
+          src="/images/product-blocks-multiple.jpg"
+          label="Coconiq cocopeat blocks in multiple sizes"
           ratio="square"
           rounded="xl"
           className="md:aspect-[4/5]"

@@ -62,7 +62,7 @@ export const guides: Guide[] = [
     excerpt:
       'A step-by-step planting guide for first-time cocopeat users — rehydration, mixing, and best practices for healthy plants.',
     content: '',
-    image: '/images/application-potting-seedling.jpg',
+    image: '/images/application-hydroponics.jpg',
     category: 'practical',
     readingTimeMinutes: 9,
     publishedAt: '2026-04-08',
