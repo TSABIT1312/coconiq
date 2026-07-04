@@ -21,7 +21,7 @@ export const galleryItems: GalleryItem[] = [
 
   { id: 'pr1', title: 'Raw coconut husks', image: '/images/production-coconut-husks.jpg', alt: 'Large pile of raw coconut husks as production raw material', category: 'production' },
   { id: 'pr2', title: 'Sorting facility', image: '/images/production-husks-workers.jpg', alt: 'Workers sorting coconut husks at the Coconiq production facility', category: 'production' },
-  { id: 'pr3', title: 'Pressing process', image: '/images/production-press-workers.jpg', alt: 'Workers operating hydraulic press machine to produce cocopeat blocks', category: 'production' },
+  { id: 'pr3', title: 'Baling machine', image: '/images/production-baling-machine.jpg', alt: 'Coconiq baling machine used to compress cocopeat into export-ready blocks', category: 'production' },
   { id: 'pr4', title: 'Quality moisture check', image: '/images/production-moisture-test.jpg', alt: 'Moisture meter being used to test cocopeat quality', category: 'production' },
   { id: 'pr5', title: 'Facility exterior', image: '/images/production-facility-exterior.jpg', alt: 'Coconiq production facility exterior with packed bags', category: 'production' },
   { id: 'pr6', title: 'Production quality control', image: '/images/production-quality-check.jpg', alt: 'Cocopeat samples in buckets for quality inspection', category: 'production' },
