@@ -1,6 +1,5 @@
 export { ProductHero } from './ProductHero'
 export { ProductOverview } from './ProductOverview'
-export type { ProductOverviewProps } from './ProductOverview'
 export { ProductBenefits } from './ProductBenefits'
 export type { ProductBenefitsProps } from './ProductBenefits'
 export { ProductSpecifications } from './ProductSpecifications'

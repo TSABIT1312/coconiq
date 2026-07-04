@@ -11,7 +11,8 @@ import {
   NotFoundPage,
   ProductsPage,
 } from '@/pages'
-import { paths } from './paths'
+import { ProductDetailPage } from '@/pages/ProductDetailPage'
+import { paths, routePatterns } from './paths'
 
 export function AppRoutes(): ReactElement {
   return (
@@ -19,6 +20,7 @@ export function AppRoutes(): ReactElement {
       <Route element={<RootLayout />}>
         <Route path={paths.home} element={<HomePage />} />
         <Route path={paths.products} element={<ProductsPage />} />
+        <Route path={routePatterns.productDetail} element={<ProductDetailPage />} />
         <Route path={paths.applications} element={<ApplicationsPage />} />
         <Route path={paths.gallery} element={<GalleryPage />} />
         <Route path={paths.guides} element={<GuidesPage />} />

@@ -7,7 +7,6 @@ import {
   ProductGallery,
   ProductHero,
   ProductOverview,
-  ProductSpecifications,
 } from '@/components/products'
 
 export function ProductsPage(): ReactElement {
@@ -21,7 +20,6 @@ export function ProductsPage(): ReactElement {
     <>
       <ProductHero />
       <ProductOverview />
-      <ProductSpecifications />
       <ProductBenefits />
       <ProductApplications />
       <ProductGallery />
