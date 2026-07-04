@@ -54,8 +54,8 @@ export function CompanyStory(): ReactElement {
         </div>
 
         <MediaPlaceholder
-          src="/images/production-husks-workers.jpg"
-          alt="Coconiq production facility with workers sorting coconut husks"
+          src="/images/production-facility-husks.jpg"
+          alt="Coconiq production facility with stored coconut husks"
           ratio="video"
           rounded="xl"
           className="md:aspect-[4/3]"

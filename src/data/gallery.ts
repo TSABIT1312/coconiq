@@ -25,6 +25,8 @@ export const galleryItems: GalleryItem[] = [
   { id: 'pr4', title: 'Quality moisture check', image: '/images/production-moisture-test.jpg', alt: 'Moisture meter being used to test cocopeat quality', category: 'production' },
   { id: 'pr5', title: 'Facility exterior', image: '/images/production-facility-exterior.jpg', alt: 'Coconiq production facility exterior with packed bags', category: 'production' },
   { id: 'pr6', title: 'Production quality control', image: '/images/production-quality-check.jpg', alt: 'Cocopeat samples in buckets for quality inspection', category: 'production' },
+  { id: 'pr7', title: 'Baling workers', image: '/images/production-baling-workers.jpg', alt: 'Workers operating baling equipment in the production area', category: 'production' },
+  { id: 'pr8', title: 'Husks storage area', image: '/images/production-facility-husks.jpg', alt: 'Coconut husks stored inside the production facility', category: 'production' },
 
   { id: 'pk1', title: 'Warehouse stock', image: '/images/packaging-warehouse-bags.jpg', alt: 'Rows of filled cocopeat sacks at Coconiq warehouse', category: 'packaging' },
   { id: 'pk2', title: 'Bulk bags ready to ship', image: '/images/packaging-sacks-stacked.jpg', alt: 'Large quantity of packed cocopeat sacks prepared for shipment', category: 'packaging' },
