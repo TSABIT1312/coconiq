@@ -32,7 +32,7 @@ export const products: Product[] = [
     slug: 'cocopeat-big-press',
     name: 'Cocopeat Big Press',
     tagline: 'Bulk compressed block — 1,400 L when hydrated',
-    description: 'Compressed cocopeat blocks designed for efficient storage and transportation. When hydrated, each block expands into a large volume of high-quality growing medium with excellent moisture retention and root support. Ideal for hydroponics, seed germination, horticulture, and large-scale farming.',
+    description: 'Our compressed cocopeat blocks are designed for efficient storage and transportation. When hydrated, each block expands into a large volume of high-quality growing medium with excellent moisture retention and root support. Ideal for hydroponics, seed germination, horticulture, and large-scale farming.',
     image: '/images/pdf-big-press.jpg',
     gallery: [
       '/images/pdf-big-press.jpg',
@@ -46,7 +46,7 @@ export const products: Product[] = [
       'Maintains stable pH and moisture levels',
     ],
     specifications: [
-      { label: 'Dimensions', value: '100 × 100 × 40 cm' },
+      { label: 'Dimensions', value: '100 cm x 100 cm x 40 cm' },
       { label: 'Expanded Volume', value: '~1,400 L' },
       { label: 'Compression Ratio', value: '5:1' },
       { label: 'Optimal Usage', value: 'Hydroponics & Large Farms' },
@@ -58,7 +58,7 @@ export const products: Product[] = [
     slug: 'cocopeat-block-5-kg',
     name: 'Cocopeat Block 5 Kg',
     tagline: 'Mid-size compressed block — 75 L when hydrated',
-    description: 'A versatile 5 Kg compressed block suitable for various horticultural needs. Expands quickly upon watering to provide a high-performing growing medium with great porosity and aeration.',
+    description: 'Our compressed cocopeat blocks are designed for efficient storage and transportation. When hydrated, each block expands into a large volume of high-quality growing medium with excellent moisture retention and root support. Ideal for hydroponics, seed germination, horticulture, and large-scale farming.',
     image: '/images/pdf-block-5kg.jpg',
     gallery: [
       '/images/pdf-block-5kg.jpg',
@@ -72,7 +72,7 @@ export const products: Product[] = [
     ],
     specifications: [
       { label: 'Weight', value: '5 Kg' },
-      { label: 'Dimensions', value: '30 × 30 × 15 cm' },
+      { label: 'Dimensions', value: '30 cm x 30 cm x 15 cm' },
       { label: 'Expanded Volume', value: '~75 L' },
       { label: 'pH Range', value: '5.5 - 6.8' },
     ],
@@ -83,7 +83,7 @@ export const products: Product[] = [
     slug: 'cocopeat-block-700-gram',
     name: 'Cocopeat Block 700 Gram',
     tagline: 'Popular retail block — 15 L when hydrated',
-    description: 'Perfect retail-friendly size block, easy to use for home gardeners and nursery setups. Quickly hydrates to provide fluffy, moisture-retaining soil helper.',
+    description: 'Our compressed cocopeat blocks are designed for efficient storage and transportation. When hydrated, each block expands into a large volume of high-quality growing medium with excellent moisture retention and root support. Ideal for hydroponics, seed germination, horticulture, and large-scale farming.',
     image: '/images/pdf-block-700g.jpg',
     gallery: [
       '/images/pdf-block-700g.jpg',
@@ -97,7 +97,7 @@ export const products: Product[] = [
     ],
     specifications: [
       { label: 'Weight', value: '700 gram' },
-      { label: 'Dimensions', value: '30 × 15 × 5 cm' },
+      { label: 'Dimensions', value: '30 cm x 15 cm x 5 cm' },
       { label: 'Expanded Volume', value: '~15 L' },
       { label: 'EC Level', value: '< 0.5 mS/cm' },
     ],
@@ -108,7 +108,7 @@ export const products: Product[] = [
     slug: 'cocopeat-block-500-gram',
     name: 'Cocopeat Block 500 Gram',
     tagline: 'Compact block — 9 L when hydrated',
-    description: 'Mini block designed for minor planting projects, apartment gardening, and school experiments. Fits directly in smaller buckets for easy rehydration.',
+    description: 'Our compressed cocopeat blocks are designed for efficient storage and transportation. When hydrated, each block expands into a large volume of high-quality growing medium with excellent moisture retention and root support. Ideal for hydroponics, seed germination, horticulture, and large-scale farming.',
     image: '/images/pdf-block-500g.jpg',
     gallery: [
       '/images/pdf-block-500g.jpg',
@@ -122,7 +122,7 @@ export const products: Product[] = [
     ],
     specifications: [
       { label: 'Weight', value: '500 gram' },
-      { label: 'Dimensions', value: '20 × 15 × 5 cm' },
+      { label: 'Dimensions', value: '20 cm x 15 cm x 5 cm' },
       { label: 'Expanded Volume', value: '~9 L' },
       { label: 'Form', value: 'Mini compressed block' },
     ],
@@ -133,7 +133,7 @@ export const products: Product[] = [
     slug: 'coco-fiber',
     name: 'Coco Fiber',
     tagline: 'Natural durable fiber for multiple industries',
-    description: 'High-strength natural coconut fibers suitable for industrial, domestic, and landscaping applications. Often used for soil erosion control blankets, mattress filling, upholstery, and brushes.',
+    description: 'Premium coco fiber is a natural, durable fiber extracted from coconut husks. It is widely used for erosion control, geotextiles, mattress and upholstery filling, rope production, hanging baskets, mulching, and horticultural applications. Eco-friendly and biodegradable, coco fiber is a sustainable solution for agricultural and industrial needs.',
     image: '/images/pdf-coco-fiber.jpg',
     gallery: [
       '/images/pdf-coco-fiber.jpg',

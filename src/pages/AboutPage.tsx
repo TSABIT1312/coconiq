@@ -7,6 +7,7 @@ import {
   CommitmentToQuality,
   CompanyStory,
   VisionMission,
+  ProductionProcess,
 } from '@/components/about'
 
 export function AboutPage(): ReactElement {
@@ -21,6 +22,7 @@ export function AboutPage(): ReactElement {
       <AboutHero />
       <CompanyStory />
       <VisionMission />
+      <ProductionProcess />
       <CommitmentToQuality />
       <AboutWhyChoose />
       <AboutCta />
