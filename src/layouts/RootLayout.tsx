@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import { Navbar } from '@/components/layout/Navbar'
 import { Footer } from '@/components/layout/Footer'
 import { ScrollToTop } from '@/components/common/ScrollToTop'
+import { WhatsAppFab } from '@/components/common/WhatsAppFab'
 
 export function RootLayout(): ReactElement {
   return (
@@ -13,6 +14,7 @@ export function RootLayout(): ReactElement {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppFab />
     </div>
   )
 }

@@ -6,7 +6,6 @@ import {
   ContactHero,
   ContactInfo,
   MapEmbed,
-  WhatsAppCta,
 } from '@/components/contact'
 
 export function ContactPage(): ReactElement {
@@ -23,7 +22,6 @@ export function ContactPage(): ReactElement {
       <ContactForm />
       <MapEmbed />
       <ContactFaq />
-      <WhatsAppCta />
     </>
   )
 }

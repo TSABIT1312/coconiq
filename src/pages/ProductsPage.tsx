@@ -1,7 +1,6 @@
 import type { ReactElement } from 'react'
 import { usePageMeta } from '@/hooks/usePageMeta'
 import {
-  InquiryCta,
   ProductApplications,
   ProductBenefits,
   ProductGallery,
@@ -23,7 +22,6 @@ export function ProductsPage(): ReactElement {
       <ProductBenefits />
       <ProductApplications />
       <ProductGallery />
-      <InquiryCta />
     </>
   )
 }
