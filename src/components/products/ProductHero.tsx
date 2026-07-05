@@ -27,8 +27,8 @@ export function ProductHero(): ReactElement {
           </div>
         </div>
         <MediaPlaceholder
-          src="/images/product-block-held.jpg"
-          alt="Coconiq Premium Cocopeat Block — sustainable growing medium"
+          src="/images/pdf-cover-hero.jpg"
+          alt="Coconiq Premium Cocopeat Cover — sustainable growing medium"
           ratio="square"
           rounded="xl"
           className="md:aspect-[4/5]"
