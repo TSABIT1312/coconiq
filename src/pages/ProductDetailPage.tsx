@@ -3,122 +3,103 @@ import { useParams, Link } from 'react-router-dom'
 import { Check } from 'lucide-react'
 import { usePageMeta } from '@/hooks/usePageMeta'
 import { Container } from '@/components/common/Container'
-import { CTAButton } from '@/components/common/CTAButton'
 import { MediaPlaceholder } from '@/components/common/MediaPlaceholder'
+import { CTAButton } from '@/components/common/CTAButton'
 import { SectionHeading } from '@/components/common/SectionHeading'
-import { getProductBySlug } from '@/data/products'
-import { applications as allApplications } from '@/data/applications'
+import { products } from '@/data/products'
+import { useWhatsApp } from '@/hooks/useWhatsApp'
+import { siteConfig } from '@/data/siteConfig'
 import { paths } from '@/routes/paths'
-import { NotFoundPage } from './NotFoundPage'
 
 export function ProductDetailPage(): ReactElement {
   const { slug } = useParams<{ slug: string }>()
-  const product = slug ? getProductBySlug(slug) : undefined
+  const product = products.find((p) => p.slug === slug)
+  const { open: openWhatsApp } = useWhatsApp()
 
   usePageMeta({
-    title: product ? `${product.name} | Coconiq` : 'Product | Coconiq',
-    description: product?.description ?? 'Coconiq premium cocopeat product.',
+    title: product ? `${product.name} | Premium Cocopeat` : 'Product Not Found',
+    description: product?.description || 'Details of our premium cocopeat products.',
   })
 
-  if (!product) return <NotFoundPage />
+  if (!product) {
+    return (
+      <Container className="section-y flex flex-col items-center justify-center gap-6 py-32 text-center">
+        <h1 className="text-3xl font-bold">Product Not Found</h1>
+        <p className="text-muted-foreground">The product you are looking for does not exist or has been moved.</p>
+        <CTAButton as={Link} to={paths.products}>
+          Back to Products
+        </CTAButton>
+      </Container>
+    )
+  }
 
-  const productApplications = allApplications.filter((a) =>
-    product.applications.includes(a.slug),
-  )
+  const handleQuote = () =>
+    openWhatsApp(`Hi ${siteConfig.name}, I'd like to request a quote for ${product.name}.`)
 
   return (
-    <section className="bg-surface">
-      <Container className="section-y flex flex-col gap-12">
-        {/* Breadcrumb */}
-        <nav className="text-sm text-muted-foreground">
-          <Link to={paths.products} className="hover:text-primary">
-            Products
+    <section aria-labelledby="product-detail-heading" className="bg-background">
+      <Container className="section-y flex flex-col gap-16 py-16 md:py-24">
+        {/* Breadcrumb / Back link */}
+        <div>
+          <Link to={paths.products} className="text-sm font-medium text-primary hover:underline">
+            &larr; Back to Products
           </Link>
-          <span className="mx-2">/</span>
-          <span className="text-foreground">{product.name}</span>
-        </nav>
+        </div>
 
-        {/* Hero: image + info */}
-        <div className="grid items-start gap-10 md:grid-cols-2 md:gap-14">
+        {/* Hero split */}
+        <div className="grid gap-10 md:grid-cols-2 md:gap-14">
           <MediaPlaceholder
-            src={product.image || undefined}
-            label={`${product.name} photo`}
+            src={product.image}
+            alt={product.name}
             ratio="square"
             rounded="xl"
             className="md:aspect-[4/5]"
           />
           <div className="flex flex-col gap-6">
-            <SectionHeading
-              eyebrow="Product"
-              title={product.name}
-              lead={product.tagline}
-            />
-            <p className="text-base text-muted-foreground md:text-lg">
-              {product.description}
-            </p>
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                Key Benefits
-              </h3>
-              <ul className="mt-4 flex flex-col gap-2 text-sm text-muted-foreground md:text-base">
-                {product.benefits.map((b) => (
-                  <li key={b} className="flex items-start gap-2">
-                    <Check
-                      aria-hidden
-                      className="mt-0.5 h-4 w-4 shrink-0 text-primary"
-                    />
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <CTAButton as={Link} to={paths.contact}>
-                Request a Quote
-              </CTAButton>
-            </div>
-          </div>
-        </div>
+            <h1 id="product-detail-heading" className="text-3xl font-bold md:text-4xl">
+              {product.name}
+            </h1>
+            <p className="text-lg font-medium text-primary">{product.tagline}</p>
+            <p className="text-base text-muted-foreground">{product.description}</p>
 
-        {/* Specifications + applications */}
-        <div className="grid gap-6 lg:grid-cols-3 lg:gap-8">
-          <div className="rounded-lg border border-border bg-background p-6 shadow-card lg:col-span-2">
-            <h3 className="text-base font-semibold">Specifications</h3>
-            <dl className="mt-5 grid gap-x-8 gap-y-4 sm:grid-cols-2">
-              {product.specifications.map((spec) => (
-                <div key={spec.label} className="flex flex-col gap-1">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
-                    {spec.label}
-                  </dt>
-                  <dd className="text-base font-medium text-foreground">
-                    {spec.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-          <div className="rounded-lg border border-border bg-background p-6 shadow-card">
-            <h3 className="text-base font-semibold">Applications</h3>
-            <ul className="mt-5 flex flex-wrap gap-2">
-              {productApplications.map((a) => (
-                <li
-                  key={a.id}
-                  className="rounded-md border border-border bg-surface px-3 py-1.5 text-sm text-foreground"
-                >
-                  {a.name}
+            <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
+              {product.benefits.map((b: string) => (
+                <li key={b} className="flex items-start gap-2">
+                  <Check aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                  <span>{b}</span>
                 </li>
               ))}
             </ul>
+
+            <div className="pt-4">
+              <CTAButton onClick={handleQuote}>Request Quote for {product.name}</CTAButton>
+            </div>
           </div>
         </div>
 
-        <div>
-          <Link
-            to={paths.products}
-            className="text-sm font-semibold text-primary hover:underline"
-          >
-            ← Back to all products
-          </Link>
+        {/* Spec table */}
+        <div className="max-w-2xl border-t border-border pt-12">
+          <SectionHeading
+            eyebrow="Technical Data"
+            title="Product Specifications"
+            className="mb-8"
+          />
+          <div className="overflow-hidden rounded-lg border border-border">
+            <table className="min-w-full divide-y divide-border">
+              <tbody className="divide-y divide-border bg-background">
+                {product.specifications.map((spec: { label: string; value: string }) => (
+                  <tr key={spec.label}>
+                    <td className="w-1/3 px-6 py-4 text-sm font-medium text-muted-foreground">
+                      {spec.label}
+                    </td>
+                    <td className="px-6 py-4 text-sm font-semibold text-foreground">
+                      {spec.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </Container>
     </section>
