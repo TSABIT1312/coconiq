@@ -14,15 +14,15 @@ export function FeaturedProductSection(): ReactElement | null {
 
   return (
     <section aria-labelledby="featured-product-heading" className="bg-background">
-      <Container className="section-y grid items-center gap-10 md:grid-cols-2 md:gap-14">
+      <Container className="section-y grid items-center gap-8 md:grid-cols-2 md:gap-14">
         <MediaPlaceholder
           src="/images/pdf-big-press.jpg"
           label="Coconiq cocopeat blocks in multiple sizes"
           ratio="square"
           rounded="xl"
-          className="md:aspect-[4/5]"
+          className="mx-auto w-full max-w-md md:aspect-[4/5]"
         />
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-5 md:gap-6">
           <SectionHeading
             eyebrow="Featured Product"
             title={<span id="featured-product-heading">{product.name}</span>}

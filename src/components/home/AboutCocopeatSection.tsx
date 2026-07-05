@@ -6,20 +6,21 @@ import { SectionHeading } from '@/components/common/SectionHeading'
 export function AboutCocopeatSection(): ReactElement {
   return (
     <section aria-labelledby="about-heading" className="bg-surface">
-      <Container className="section-y grid gap-10 md:grid-cols-2 md:items-center md:gap-14">
-        <div className="grid grid-cols-2 gap-4">
+      <Container className="section-y grid gap-8 md:grid-cols-2 md:items-center md:gap-14">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           <MediaPlaceholder
             src="/images/product-blocks-multiple.jpg"
             alt="Coconiq branded cocopeat blocks in multiple sizes"
             ratio="square"
             rounded="lg"
+            className="shadow-card"
           />
           <MediaPlaceholder
             src="/images/product-loose-sacks.jpg"
             alt="Loose cocopeat material in sacks"
             ratio="square"
             rounded="lg"
-            className="mt-8"
+            className="mt-4 shadow-card md:mt-8"
           />
         </div>
         <SectionHeading

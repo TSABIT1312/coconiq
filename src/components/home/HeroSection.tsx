@@ -15,18 +15,20 @@ export function HeroSection(): ReactElement {
 
   return (
     <section aria-labelledby="hero-heading" className="bg-background">
-      <Container className="grid items-center gap-10 py-16 md:grid-cols-2 md:gap-12 md:py-24 lg:py-28">
-        <div className="flex flex-col gap-6">
+      <Container className="grid items-center gap-8 py-14 md:grid-cols-2 md:gap-12 md:py-24 lg:py-28">
+        <div className="flex flex-col gap-5 md:gap-6">
           <SectionEyebrow>Premium Cocopeat</SectionEyebrow>
-          <h1 id="hero-heading">Grow Better with Premium Cocopeat</h1>
-          <p className="max-w-xl text-base text-muted-foreground md:text-lg">
+          <h1 id="hero-heading" className="max-w-xl text-[2.4rem] leading-tight md:text-6xl">
+            Grow Better with Premium Cocopeat
+          </h1>
+          <p className="max-w-xl text-[0.98rem] leading-relaxed text-muted-foreground md:text-lg">
             Sustainable growing media designed for better water retention, root
             development, and plant growth — for gardening, hydroponics, and
             modern agriculture.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
-            <CTAButton onClick={handleQuote}>Get a Quote</CTAButton>
-            <CTAButton as={Link} to={paths.applications} variant="secondary">
+            <CTAButton className="w-full sm:w-auto" onClick={handleQuote}>Get a Quote</CTAButton>
+            <CTAButton className="w-full sm:w-auto" as={Link} to={paths.applications} variant="secondary">
               Explore Applications
             </CTAButton>
           </div>
@@ -37,7 +39,7 @@ export function HeroSection(): ReactElement {
           ratio="square"
           rounded="xl"
           priority
-          className="md:aspect-[4/5]"
+          className="mx-auto w-full max-w-md md:aspect-[4/5]"
         />
       </Container>
     </section>
