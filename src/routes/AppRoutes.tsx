@@ -1,12 +1,9 @@
 import type { ReactElement } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { RootLayout } from '@/layouts/RootLayout'
 import {
   AboutPage,
-  ApplicationsPage,
   ContactPage,
-  GalleryPage,
-  GuidesPage,
   HomePage,
   NotFoundPage,
   ProductsPage,
@@ -21,11 +18,14 @@ export function AppRoutes(): ReactElement {
         <Route path={paths.home} element={<HomePage />} />
         <Route path={paths.products} element={<ProductsPage />} />
         <Route path={routePatterns.productDetail} element={<ProductDetailPage />} />
-        <Route path={paths.applications} element={<ApplicationsPage />} />
-        <Route path={paths.gallery} element={<GalleryPage />} />
-        <Route path={paths.guides} element={<GuidesPage />} />
         <Route path={paths.about} element={<AboutPage />} />
         <Route path={paths.contact} element={<ContactPage />} />
+        {/* Deprecated pages redirect to home for SEO safety */}
+        <Route path="/applications" element={<Navigate to={paths.home} replace />} />
+        <Route path="/applications/*" element={<Navigate to={paths.home} replace />} />
+        <Route path="/gallery" element={<Navigate to={paths.home} replace />} />
+        <Route path="/guides" element={<Navigate to={paths.home} replace />} />
+        <Route path="/guides/*" element={<Navigate to={paths.home} replace />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
